@@ -18,8 +18,8 @@ from datetime import datetime
 USAGE = 'Usage: python mailsubjects.py -i <inputcsvfile> -l <logfile> -e <emailbodyfile> -u <sender mail address>, -p <password> \
         -s <subject mail>'
         
-EMAIL_INDEX = 6
-ATTACHMENT_INDEX = 5
+EMAIL_INDEX = 8
+ATTACHMENT_INDEX = 9
 SMTP = 'mail.staff.hua.gr'
 PORT = 587
 
@@ -46,6 +46,7 @@ def mailLogin(sender_email, password, smtpServer, port):
     context = ssl.create_default_context()
     
     print('attempting login to %s' % smtpServer)
+   
     
     try:
         server = smtplib.SMTP(smtpServer,port)        
