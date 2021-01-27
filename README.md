@@ -2,7 +2,7 @@
 * παίρνουμε το csv αρχείο από το φοιτητολόγιο ``<inputcsvfile>``
 * Δημιουργούμε μια νέα στήλη όπου θα βάλουμε το path για τα αρχεία που δημιουργήσαμε ώστε να σταλούν στους φοιτητές
 * εντοπίζουμε τις στήλες με το email και το attachment και το θέτουμε σαν παραμέτρους στο αρχείο mailsubjects.conf
-* Δημιουργία google form για την υποβολή τψν απαντήσεων
+* Δημιουργία google form για την υποβολή των απαντήσεων και κρατάμε το link
 
 
 Παραμετροποίηση του email body.txt με το όνομα μαθήματος, τις ώρες εξέτασης και το google form link που θα υποβληθούν.
@@ -19,9 +19,9 @@ python mailsubjects.py -i <inputcsvfile> -l <logfile> \
 ```
 Παράδειγμα:
 ```bash
-python mailsubjects.py -i sample.csv -l sample.log -e custom_body.txt -u tsadimas@staff.hua.gr -p 'password' -s "θΕΜΑΤΑ ΕΞΕΤΑΣΕΩΝ ΣΤΑ ΚΑΤΑΝΕΜΗΜΕΝΑ ΣΥΣΤΗΜΑΤΑ"
+python mailsubjects.py -i sample.csv -l sample.log -e custom_body.txt -u user@mail.com -p 'password' -s "θΕΜΑΤΑ ΕΞΕΤΑΣΕΩΝ ΣΤΑ ΚΑΤΑΝΕΜΗΜΕΝΑ ΣΥΣΤΗΜΑΤΑ"
 ```
-Εναλλακτικά
+Εναλλακτικά μπορούμε να περάσουμε σε άνα config αρχείο τις παραμέτρους
 ```bash
 python mailsubjects.py -c mailsubjects.conf
 ```
